@@ -1,0 +1,88 @@
+* {
+font-family: 'Open Sans', sans-serif;
+box-sizing: border-box;
+}
+.content {
+    height: 100vh;
+    width:100vw ;
+    padding: 1rem;
+    background-color: #fff;
+}
+body {
+    background-color: #f6f8fc;
+}
+@media screen and (min-width: 992px ) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin:  auto;
+    }
+}
+/** usado para a responsividade do Site **/
+@media screen and (min-width: 576px ) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/** ol = lista objetiva **/
+.pokemons {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/** usado para a responsividade do Site **/
+@media screen and (min-width: 992px ) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+/** Utiliza o li para aplicar nos itens dentro da ol (object list) **/
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 2rem 1rem;
+    background-color: #49D0B0;
+    color: #fff;
+    border-radius: 1rem;
+    display: flex;
+}
+.pokemon .number {
+    color: #000;
+    text-align: right;
+    opacity: 0.3;
+    font-size: .625rem;
+}
+.pokemon .name {
+    color: #fff;
+    margin-bottom: .25rem;
+}
+.pokemon .detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.pokemon .details .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.pokemon .detail .types .type {
+    background-color: #61e1ca ;
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+}
+.pokemons .details img {
+    max-width: 100%;
+    height: 70px;
+    align-self: flex-end;
+}
